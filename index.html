@@ -171,7 +171,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2023/12/08/blog4/">
-        blog4
+        linux
         
       </a>
     </h1>
@@ -225,7 +225,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2023/12/08/blog3/">
-        blog3
+        嵌入式
         
       </a>
     </h1>
@@ -236,7 +236,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#原理</p>
+<p>#知识点</p>
+<p>##32单片机启动流程</p>
+<p>编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快，但是计算机中寄存器和cache的容量却很小的原因， 你可以买到1T的硬盘但是没买不到1T的内存条，价格太高，有也买不起。寄存器的数量和功能在Soc中是固定的，后期没法扩展，寄存器资源是稀缺的，对寄存器的操作要谨慎。</p>
+
       
     </div>
     
@@ -279,7 +283,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2023/12/08/blog2/">
-        嵌入式复习
+        c++
         
       </a>
     </h1>
@@ -333,7 +337,7 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2023/12/08/blog1/">
-        c语言复习
+        c语言
         
       </a>
     </h1>
@@ -344,7 +348,97 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#c语言数据类型</p>
+<ul>
+<li><p>1.基本数据类型</p>
+<blockquote>
+<p>①整型 ：int 占2字节</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>短整型            short int            2byte</p>
+<p>长整型            long int              4byte</p>
+<p>无符号整型    unsigned int          2byte</p>
+<p>无符号短整型 unsigned short int       2byte</p>
+<p>无符号长整型 unsigned long int     4byte</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>②字符型 ：char 占1字节</p>
+<p>③实型（浮点型） </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>单精度型 float 占4字节</p>
+<p>双精度型double 占8字节</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>2.构造数据类型</p>
+<blockquote>
+<p>枚举类型</p>
+<p>数组类型</p>
+<p>结构体类型</p>
+<p>共用体类型</p>
+</blockquote>
+</li>
+<li><p>3.指针类型</p>
+</li>
+<li><p>4.空类型</p>
+</li>
+</ul>
+<p>#c语言存储类型</p>
+<p>​    自动变量（auto）</p>
+<p>​    静态变量（static）</p>
+<p>​    外部变量（extern）</p>
+<p>​    寄存器变量（register）</p>
+<p>#c语言关键字</p>
+<p>​    c语言关键字有：1、数据类型关键字（12个）；2、控制语句关键字（12个）；3、存储类型关键字（4个）；4、其它关键字（4个）。</p>
+<p>​    1.数据类型关键字：</p>
+<p>​        char,double,enum,float,int,long,short,signed,struct,union,unsigned,void。</p>
+<p>​    2.控制语句关键字：</p>
+<p>​        ①循环语句：</p>
+<p>​            for,do,while,break,continue。</p>
+<p>​        ②条件语句：</p>
+<p>​            if,else,goto。</p>
+<p>​        ③开关语句：</p>
+<p>​            switch,case,default。</p>
+<p>​        ④返回语句：</p>
+<p>​            return。</p>
+<p>​    3.存储类型关键字：</p>
+<p>​        auto,extern,register,static。</p>
+<p>​        ==注==：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>auto 关键字可以用于变量类型的推断，我们可以在声明变量的时候根据变量初始值的类型自动为该变量选择合适的类型，而不需要我们显式指定类型。</p>
+<p>extern 关键字一般用在变量名前或函数名前，作用是用来说明“此变量/函数是在别处定义的，要在此处引用‘’标准定义格式：<strong>extern 类型名 变量名；</strong></p>
+<p>register关键字修饰变量，就是编译程序时希望把该变量放到寄存器中，这样可以提高对该变量的访问速度。由前言可知，CPU访问寄存器的速度是高于访问内存的速度。当一个变量会被频繁调用时，可以用register去修饰变量，将变量保存在寄存器中，可以提升访问变量的速度。</p>
+<p>static关键字修饰局部变量时，会改变局部变量的存储位置，从而使得局部变量的生命周期变长。其本质是： 普通的局部变量创建后是放在<em><strong>栈区</strong></em>中，这种局部变量进入作用域时创建，出了作用域就销毁；但static修饰后的局部变量则放在<strong>静态区</strong>中，它改变了局部变量的存储位置，从而使得变量的生命周期延长，延长至程序结束才销毁。static修饰局部变量只改变生命周期，不改变作用域。static修饰全局变量时，会改变全局变量的<em><strong>链接属性</strong></em>，从而使得全局变量的作用域变小，不能被外部引用。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>​    4.其它关键字：</p>
+<p>​        const,sizeof,typedef,volatile。</p>
+
       
     </div>
     
