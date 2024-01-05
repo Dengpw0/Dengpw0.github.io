@@ -153,6 +153,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-blog5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2024/01/05/blog5/" class="article-date">
+  	<time datetime="2024-01-05T08:35:58.000Z" itemprop="datePublished">2024-01-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/05/blog5/">
+        hexo markdown一些技巧
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>blog 文章的#后加空格</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-blog4" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -182,7 +237,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h1><h1 id="内存问题"><a href="#内存问题" class="headerlink" title="内存问题"></a>内存问题</h1><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1>
       
     </div>
     
@@ -236,10 +291,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#原理</p>
-<p>#知识点</p>
-<p>##32单片机启动流程</p>
-<p>编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快，但是计算机中寄存器和cache的容量却很小的原因， 你可以买到1T的硬盘但是没买不到1T的内存条，价格太高，有也买不起。寄存器的数量和功能在Soc中是固定的，后期没法扩展，寄存器资源是稀缺的，对寄存器的操作要谨慎。</p>
+        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><h2 id="32单片机启动流程"><a href="#32单片机启动流程" class="headerlink" title="32单片机启动流程"></a>32单片机启动流程</h2><p>编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快，但是计算机中寄存器和cache的容量却很小的原因， 你可以买到1T的硬盘但是没买不到1T的内存条，价格太高，有也买不起。寄存器的数量和功能在Soc中是固定的，后期没法扩展，寄存器资源是稀缺的，对寄存器的操作要谨慎。</p>
 
       
     </div>
@@ -348,9 +400,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#c语言数据类型</p>
-<ul>
-<li><p>1.基本数据类型</p>
+        <h1 id="c语言数据类型"><a href="#c语言数据类型" class="headerlink" title="c语言数据类型"></a>c语言数据类型</h1><ul>
+<li> 1.基本数据类型</li>
+</ul>
 <blockquote>
 <p>①整型 ：int 占2字节</p>
 <blockquote>
@@ -359,11 +411,11 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>短整型            short int            2byte</p>
-<p>长整型            long int              4byte</p>
-<p>无符号整型    unsigned int          2byte</p>
-<p>无符号短整型 unsigned short int       2byte</p>
-<p>无符号长整型 unsigned long int     4byte</p>
+<p> 短整型            short int            2byte</p>
+<p> 长整型            long int              4byte</p>
+<p> 无符号整型    unsigned int          2byte</p>
+<p> 无符号短整型 unsigned short int       2byte</p>
+<p> 无符号长整型 unsigned long int     4byte</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -378,8 +430,8 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>单精度型 float 占4字节</p>
-<p>双精度型double 占8字节</p>
+<p> 单精度型 float 占4字节</p>
+<p> 双精度型double 占8字节</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -387,7 +439,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-</li>
+<ul>
 <li><p>2.构造数据类型</p>
 <blockquote>
 <p>枚举类型</p>
@@ -401,13 +453,11 @@
 <li><p>4.空类型</p>
 </li>
 </ul>
-<p>#c语言存储类型</p>
-<p>​    自动变量（auto）</p>
+<h1 id="c语言存储类型"><a href="#c语言存储类型" class="headerlink" title="c语言存储类型"></a>c语言存储类型</h1><p>​    自动变量（auto）</p>
 <p>​    静态变量（static）</p>
 <p>​    外部变量（extern）</p>
 <p>​    寄存器变量（register）</p>
-<p>#c语言关键字</p>
-<p>​    c语言关键字有：1、数据类型关键字（12个）；2、控制语句关键字（12个）；3、存储类型关键字（4个）；4、其它关键字（4个）。</p>
+<h1 id="c语言关键字"><a href="#c语言关键字" class="headerlink" title="c语言关键字"></a>c语言关键字</h1><p>​    c语言关键字有：1、数据类型关键字（12个）；2、控制语句关键字（12个）；3、存储类型关键字（4个）；4、其它关键字（4个）。</p>
 <p>​    1.数据类型关键字：</p>
 <p>​        char,double,enum,float,int,long,short,signed,struct,union,unsigned,void。</p>
 <p>​    2.控制语句关键字：</p>
@@ -421,7 +471,7 @@
 <p>​            return。</p>
 <p>​    3.存储类型关键字：</p>
 <p>​        auto,extern,register,static。</p>
-<p>​        ==注==：</p>
+<p>​        <strong>注</strong>：</p>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -469,7 +519,7 @@
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2023 John Doe
+        &copy; 2024 John Doe
       </div>
         <div class="footer-right">
           <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>

@@ -9,15 +9,15 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#原理 #知识点 ##32单片机启动流程 编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache">
+  <meta name="description" content="原理知识点32单片机启动流程编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快">
 <meta property="og:type" content="article">
 <meta property="og:title" content="嵌入式">
 <meta property="og:url" content="http://example.com/2023/12/08/blog3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#原理 #知识点 ##32单片机启动流程 编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache">
+<meta property="og:description" content="原理知识点32单片机启动流程编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-08T08:45:59.000Z">
-<meta property="article:modified_time" content="2023-12-17T15:35:15.165Z">
+<meta property="article:modified_time" content="2024-01-05T08:53:39.114Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -190,10 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#原理</p>
-<p>#知识点</p>
-<p>##32单片机启动流程</p>
-<p>编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快，但是计算机中寄存器和cache的容量却很小的原因， 你可以买到1T的硬盘但是没买不到1T的内存条，价格太高，有也买不起。寄存器的数量和功能在Soc中是固定的，后期没法扩展，寄存器资源是稀缺的，对寄存器的操作要谨慎。</p>
+        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><h2 id="32单片机启动流程"><a href="#32单片机启动流程" class="headerlink" title="32单片机启动流程"></a>32单片机启动流程</h2><p>编译器的优化很大程度上就是通过数据流分析、调整读取内存的顺序等，减少CPU对内存的读写。因为内存的运行速度相对于CPU是很慢的，计算机中添加cache就是为了解决CPU和内存运行速度差异过大的问题。就运行速度来说：寄存器&gt;cache&gt;内存&gt;外存；就价格来说刚好相反：寄存器&gt;cache&gt;内存&gt;外存。这也是寄存器和cache的读取速度最快，但是计算机中寄存器和cache的容量却很小的原因， 你可以买到1T的硬盘但是没买不到1T的内存条，价格太高，有也买不起。寄存器的数量和功能在Soc中是固定的，后期没法扩展，寄存器资源是稀缺的，对寄存器的操作要谨慎。</p>
 
       
     </div>
@@ -233,7 +230,7 @@
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2023 John Doe
+        &copy; 2024 John Doe
       </div>
         <div class="footer-right">
           <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
